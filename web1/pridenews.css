@@ -1,0 +1,117 @@
+body
+{
+    background-image:url(image/backkkk.jpg);
+    margin-top: 1%;
+}
+.navigation_bar
+{
+    display: block;
+    text-align: center;
+    margin-left: 9%;
+    margin-right: 9%;
+    padding-top: 0;
+    text-decoration: none;
+    font-size: 20px;
+     margin-left: 16%;
+
+
+}
+.navigation
+{
+    list-style-type: none;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    font-family: cursive;
+    min-width: 1000px;
+    position: relative;
+    vertical-align:middle;
+
+
+}
+.navigation a:link, .navigation a:visited
+{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color:azure;
+    width: 160px;
+    background-color:darkslategray;
+    height:60px;
+    text-decoration: none;
+    padding-top: 15%;
+   
+
+}
+.navigation a:hover, .navigation a:active
+{
+    background-color:cadetblue
+}
+
+
+.navigation_bar li
+{float:left}
+.logo
+{
+    width: 84px;
+   
+
+}
+h3
+{
+    font-family:cursive;
+    font-size: 21px;
+    padding-left: 3%;
+    
+}
+.pride1
+{
+    font-family:cursive;
+    margin-left: 3%;
+    padding-right: 3%;
+}
+
+table {
+    border-collapse:collapse;
+    border: 0;
+
+    
+  
+    
+
+}
+#table_p
+{
+   
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-left: 12%;
+    margin-right: 12%;
+    padding-bottom: 5%;
+    padding-top: 4%;
+    min-width: 1000px;
+    position: relative;
+}
+
+
+table, tr, td {
+    text-align: left;
+    border: 0px solid grey
+   
+}
+.pride1
+{
+    font-family: cursive;
+    font-size:18px;
+
+}
+#footer
+{
+    clear:both;
+    color:darkgrey;
+    text-align:center;
+    font-size: 10px;
+    padding-top:10%;
+ 
+}

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet">
+
+    <style>
+        body{
+/*    background-color: aliceblue;*/
+            background-image: url(nwimage/LiveLearn.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+        }
+       
+        #introduction{
+           
+          margin-left: 10%;
+          margin-right: 10%;
+          padding-left: 5%;
+          padding-right: 5%;
+          padding-top: 20%;
+          padding-bottom: 4%;
+          font-size: 22px;
+          text-align:inherit;
+          color: papayawhip;
+          
+           
+       }
+        h1
+{
+    color: papayawhip;
+    padding-top: 3%;
+    font-family: cursive;
+    
+}
+        .video{
+            padding-bottom: 5%;
+            padding-top: 5%
+        }
+        .nimage
+{
+    text-align: center;
+    
+}
+        .more{
+           text-align: center;
+          
+       }
+        #nobelprimary
+{
+    width: 70%;
+    
+}
+        #topic1
+{
+    text-align: center;
+   
+}
+        #gender_check
+{
+    text-align: center;
+    color: gold;
+}
+        .butto{
+            background-color: dimgrey;
+        }
+       .butto:hover{
+           background-color:darkgrey;
+           
+       }
+       .butto:active{
+           background-color: dimgrey;
+       }
+       
+       
+       .context{
+           text-align: center;
+          
+       }
+
+        .con{
+             padding-top: 20%;
+        }
+        .demo {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .mytable {
+            width: 100%;
+            margin-top: 8%;
+            font-family: fantasy;
+            border-color:#635e4d;
+
+        }
+        footer{
+            font-size: 10px;
+            text-align:center;
+            padding-top: 20%;
+            color:papayawhip;
+        }
+/*    reference: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
+        .butt {
+  border-radius: 100px;
+  background-color:black;
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  width: 140px;
+  transition: all 0.5s;
+    bottom: 20%;
+  cursor: pointer;
+  margin: 5px;
+}
+
+        .butt span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+        .butt span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+        .butt:hover span {
+  padding-right: 25px;
+}
+
+        .butt:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+        .div.img{
+         position: absolute;
+        z-index: -1;
+    
+            
+        }
+       
+        </style>
+
+    <title>Nobel Winners</title>
+</head>
+
+<body>
+    <div id="part1">
+        <h1 id="topic1">Nobel Winners</h1>
+        <!--    reference:    https://answers.squarespace.com/questions/31766/align-an-embedded-video.html-->
+        <div class="video" style="text-align: center"><iframe width="600" height="400" src="https://www.youtube.com/embed/gsACn9AUrw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </div>
+    <div class="nimage">
+
+        <p></p>
+
+
+        <div style="position: fixed; bottom: 42%">
+            <ul style="list-style-type: none">
+                <li><a href="#part1"><button class="butt"><span style="font-family: monospace; color:papayawhip">Video</span></button></a></li>
+
+                <li><a href="#introduction"><button class="butt"><span style="font-family: monospace; color:papayawhip">Introduction </span></button></a></li>
+
+                <li><a href="#con"><button class="butt"><span style="font-family: monospace; color:papayawhip">Search</span></button></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <div id="introduction" style="font-family:fantasy; text-align: center"><b>
+            <!--   reference:     https://en.wikipedia.org/wiki/Nobel_Prize-->
+
+            The Nobel Prize, is a set of annual international awards bestowed in several categories by Swedish and Norwegian institutions in recognition of academic, cultural, or scientific advances.
+            <br> <br>
+            The will of the Swedish scientist Alfred Nobel established the five Nobel prizes in 1895. The prizes in Chemistry, Literature, Peace, Physics, and Physiology or Medicine were first awarded in 1901. In 1968, Sweden's central bank, Sveriges Riksbank, established the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, which, although not being a Nobel Prize, has become informally known as the "Nobel Prize in Economics". The prizes are widely regarded as the most prestigious awards available in the fields of chemistry, economics, literature, peace activism, physics, and physiology or medicine.
+            <br><br>The Royal Swedish Academy of Sciences awards the Nobel Prize in Chemistry, the Nobel Prize in Physics, and the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel; the Nobel Assembly at the Karolinska Institute awards the Nobel Prize in Physiology or Medicine; the Swedish Academy grants the Nobel Prize in Literature; and the Nobel Peace Prize is awarded by the Norwegian Nobel Committee.
+        </b>
+    </div>
+
+
+    <p></p>
+
+    <div class="more">
+
+
+    </div>
+    <div class="con" id="con">
+        <div class="context">
+            <span style="color: papayawhip;font-size: 20px; font-family: fantasy">Please enter the year you want to inquire : </span>
+            <input type="text" id="year1">
+            <input type="text" id="year2">
+            <button type="button" class="butto" onclick="displayJson(global_json_object)" style="font-size: 14px; color: papayawhip; font-family: fantasy">Submit</button>
+            <p></p>
+
+        </div>
+        <div class="context">
+            <span style="color: papayawhip;font-size: 20px; font-family: fantasy">Prize Category :</span>
+            <select id="selectCategory">
+                <option selected="selected" class="field">All</option>
+                <option class="field">chemistry</option>
+                <option class="field">economics</option>
+                <option class="field">literature</option>
+                <option class="field">medicine</option>
+                <option class="field">physics</option>
+                <option class="field">peace</option>``
+            </select>
+
+            <span style="color: papayawhip;font-size: 20px; font-family: fantasy">Select Country : </span>
+            <select id="country">
+
+                <option checked>All</option>
+            </select>
+            <div id="more_info"></div>
+        </div>
+        <p></p>
+        <div class="context">
+            <span style="color: papayawhip;font-size: 20px; font-family: fantasy">Select Gender : </span>
+            <span class="genderr" style="color: papayawhip;font-size: 20px; font-family: fantasy">Male & Female Winners
+                <input type="radio" id="both" name="checkg" checked="checked" value="both" onclick="displayGender()" style="color: papayawhip;font-size: 20px; font-family: fantasy">
+                Male Winners
+                <input type="radio" id="male" name="checkg" value="male" onclick="displayGender()" style="color: papayawhip;font-size: 20px; font-family: fantasy">
+                Female Winners
+                <input type="radio" id="female" name="checkg" value="female" onclick="displayGender()">
+            </span>
+        </div>
+    </div>
+
+
+    <div id="demo" class="demo">
+        <p id="demo"></p>
+    </div>
+
+    <footer>Copyright ©️ 2018 Enxi Cui</footer>
+    <script>
+        //    reference:    https://www.w3schools.com/js/js_json_parse.asp
+        var xmlhttp = new XMLHttpRequest();
+        var url = "nobelWinners.json";
+        var global_json_object;
+
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var parsedObj = JSON.parse(xmlhttp.responseText);
+                global_json_object = parsedObj;
+                displayCountry(global_json_object);
+            }
+        };
+
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+
+        // reference: https://stackoverflow.com/questions/3386095/is-it-better-to-write-var-arr-than-var-arr-new-array
+        function displayCountry(obj) {
+            var countryContent = document.getElementById("country");
+            var laureates = obj.laureates;
+            var arr = [];
+            for (let i = 0; i < laureates.length; i++) {
+                let country = laureates[i].bornCountry;
+                if (arr.indexOf(country) == -1) {
+                    arr.push(country);
+                }
+            }
+            arr.sort();
+
+            for (let i = 0; i < arr.length; i++) {
+                countryContent.innerHTML += "<option>" + arr[i] + "</option>";
+
+            }
+        }
+
+
+
+
+
+        // reference: https://www.w3schools.com/howto/howto_js_filter_table.asp
+
+        function displayGender() {
+            var gender_check;
+            if (document.getElementById("female").checked) {
+                gender_check = document.getElementById("female").value;
+            }
+            if (document.getElementById("male").checked) {
+                gender_check = document.getElementById("male").value;
+            }
+            if (document.getElementById("both").checked) {
+                gender_check = document.getElementById("both").value;
+            }
+
+            var filter, table, tr, td, i;
+
+            filter = gender_check.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[4];
+
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) == 0) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function displayDetail(target_name) {
+            var laureates = global_json_object.laureates;
+            var out = "<table border = 1 id='myTable' class='mytable'>";
+
+            for (let i = 0; i < laureates.length; i++) {
+
+                let firstname = laureates[i].firstname;
+                let born = laureates[i].born;
+                let died = laureates[i].died;
+                let bornCity = laureates[i].bornCity;
+                let motivation = laureates[i].prizes[0].motivation;
+                let affiliations_name = laureates[i].prizes[0].affiliations[0].name;
+                let affiliations_city = laureates[i].prizes[0].affiliations[0].city;
+                let affiliations_country = laureates[i].prizes[0].affiliations[0].country;
+
+                if (firstname == target_name) {
+
+                    out += "<tr><td style='color:papayawhip'>" + "year of birth" + "</td><td style='color:papayawhip'>" + "year of death" + "</td><td style='color:papayawhip'>" + "city of birth" + "</td><td style='color:papayawhip'>" + "motivation" + "</td><td style='color:papayawhip'>" + "affiliation name" + "</td><td style='color:papayawhip'>" + "affiliation city" + "</td><td style='color:papayawhip'>" + "affiliation country" + "</td></tr>";
+                    // reference: https://www.haorooms.com/post/js_isArray
+                    if (typeof born != "undefined") {
+                        out += "<td style='color:papayawhip'>" + born + "</td>";
+                    }
+                    if (typeof died != "undefined") {
+                        out += "<td style='color:papayawhip'>" + died + "</td>";
+                    }
+                    if (typeof bornCity != "undefined") {
+                        out += "<td style='color:papayawhip'>" + bornCity + "</td>";
+                    }
+
+                    if (typeof motivation != "undefined") {
+                        out += "<td style='color:papayawhip'>" + motivation + "</td>";
+                    }
+
+                    if (typeof affiliations_name != "undefined") {
+                        out += "<td style='color:papayawhip'>" + affiliations_name + "</td>";
+                    }
+                    if (typeof affiliations_city != "undefined") {
+                        out += "<td style='color:papayawhip'>" + affiliations_city + "</td>";
+                    }
+                    if (typeof affiliations_country != "undefined") {
+                        out += "<td style='color:papayawhip'>" + affiliations_country + "</td>";
+                    }
+
+
+                    out += "</table>";
+                    document.getElementById("demo").innerHTML = out;
+
+                }
+            }
+        }
+
+        function displayJson() {
+
+            var laureates = global_json_object.laureates;
+            var y1 = document.getElementById("year1").value;
+            var y2 = document.getElementById("year2").value;
+            var categorySelect = document.getElementById("selectCategory").value;
+            var countrySelect = document.getElementById("country").value;
+            if (y1 < 1901 || y2 > 2018) {
+                alert("please check your input.")
+            } else {
+                var output = "<table border = 1 id='myTable' class='mytable' style='backgorund-color: papayawhip'>";
+                output += "<tr style='backgorund-color: papayawhip'><td style='color:papayawhip'>" + "firstname" + "</td><td style='color:papayawhip'>" + "surname" + "</td><td style='color:papayawhip'>" + "year" + "</td><td style='color:papayawhip'>" + "category" + "</td><td style='display: none'>" + "gender" + "<td></tr>";
+
+                for (let i = 0; i < laureates.length; i++) {
+                    let year = laureates[i].prizes[0].year;
+                    let category = laureates[i].prizes[0].category;
+                    let gender = laureates[i].gender;
+                    let more = document.getElementById("more_info");
+                    if (year >= y1 && year <= y2) {
+
+                        let firstname = laureates[i].firstname;
+                        let surname = laureates[i].surname;
+                        let country = laureates[i].bornCountry;
+
+
+                        if (categorySelect == "All") {
+                            if (countrySelect == "All") {
+                                output += "<tr><td style='color:papayawhip'>" + "<input type='button' onclick='displayDetail(this.value)' style='background-color: dimgrey;font-size: 14px; color: papayawhip; font-family: fantasy' value='" + firstname + "'>" + "</td><td style='color:papayawhip'>" + surname + "</td><td style='color:papayawhip'>" + year + "</td><td style='color:papayawhip'>" + category + "</td><td style='display: none'>" + gender + "</td></tr>";
+                            } else if (countrySelect == country) {
+                                output += "<tr><td style='color:papayawhip'>" + "<input type='button' onclick='displayDetail(this.value)' style='background-color: dimgrey; font-size: 14px; color: papayawhip; font-family: fantasy' value='" + firstname + "'>" + "</td><td style='color:papayawhip''>" + surname + "</td><td style='color:papayawhip'>" + year + "</td><td style='color:papayawhip''>" + category + "</td><td style='display: none'>" + gender + "</td></tr>";
+                            }
+
+                        } else if (category == categorySelect) {
+                            if (countrySelect == "All") {
+                                output += "<tr><td style='color:papayawhip'>" + "<input type='button' onclick='displayDetail(this.value)' style='background-color: dimgrey; font-size: 14px; color: papayawhip; font-family: fantasy' value=" + firstname + "'>" + "</td><td style='color:papayawhip'>" + surname + "</td><td style='color:papayawhip'>" + year + "</td><td style='color:papayawhip'>" + category + "</td><td style='display: none'>" + gender + "</td></tr>";
+                            } else if (countrySelect == country) {
+                                output += "<tr><td style='color:papayawhip'>" + "<input type='button' onclick='displayDetail(this.value)' style='background-color: dimgrey; font-size: 14px; color: papayawhip; font-family: fantasy' value='" + firstname + "'>" + "</td><td style='color:papayawhip'>" + surname + "</td><td style='color:papayawhip'>" + year + "</td><td style='color:papayawhip'>" + category + "</td><td style='display: none'>" + gender + "</td></tr>";
+                            }
+                        }
+
+                    }
+
+                }
+
+                output += "</table>";
+                document.getElementById("demo").innerHTML = output;
+
+            }
+        }
+
+    </script>
+
+</body>

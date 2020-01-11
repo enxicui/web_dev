@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="homepage.css">
+   
+        <title>Index</title>
+    </head>
+<body>
+
+<!-- Navigation -->
+    <div class="navigation_bar">
+                <ul class="navigation">
+                    <li><img alt="logo" class="logo" src="image/image4.jpg"></li>
+                    
+                    <li id="home"><a href="homepage.html"><b>Home</b></a></li>
+                    <li id="lgbtq"><a href="rainbowflag.html"><b>Rainbow Flag</b></a></li>
+                    <li id="history"><a href="history.html"><b>History in Ireland</b></a></li>
+                    <li id="pridenews"><a href="pridenews.html"><b>Pride News</b></a></li>
+                    <li id="images"><a href="gallery.html"><b>Gallery</b></a></li>
+                    
+        </ul></div>
+   
+    <div style="position: fixed">
+        <ul style="list-style-type: none">
+            <li><a href="https://www.facebook.com/profile.php?id=100009139875848"><img alt="facebook" src="image/facebook.png" style="width: 3%"></a></li>
+            <li><a href="https://www.instagram.com/p/BnBEO2mHN2_/?utm_source=ig_web_button_share_sheet"><img  alt="ins" src="image/Instagram-v051916_0.png" style="width: 3%"></a></li>
+            <li><a href="https://help.twitter.com/forms/signin_submitted?regarding=web_login#"><img alt="twitter" src="image/twitter-1024x1024.png" style="width: 3%"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCHnd1au_55huq9yQPgtXUog?view_as=subscriber"><img alt="youtube"  src="image/YouTube_icon.png" style="width: 3%"></a></li>
+        </ul>
+    
+    </div>
+<!-- Slide Show -->
+<div style="margin-left: 28%">
+  <img alt="image" class="mySlides" src="image/image2.jpg"
+  style="width:60%">
+  <img alt="image" class="mySlides" src="image/image1.png"
+  style="width:60%">
+  <img alt="image" class="mySlides" src="image/image3.jpg"
+  style="width:60%">
+</div>
+
+<!-- Band Description -->
+    <div class="introduce">
+        <h2><i>LGBTQ+</i></h2>
+  
+    <p class="paragraph"><i>The LGBT community or GLBT community, also referred to as the gay community, is a loosely defined grouping of  lesbian,  gay,  bisexual, transgender,  LGBT organizations, and subcultures, united by a common culture and social movements. These communities generally celebrate pride, diversity, individuality, and sexuality. LGBT activists and sociologists see LGBT community-building as a counterbalance to heterosexism, homophobia, biphobia, transphobia, sexualism, and conformist pressures that exist in the larger society. The term pride or sometimes gay pride is used to express the LGBT community's identity and collective strength; pride parades provide both a prime example of the use and a demonstration of the general meaning of the term. The LGBT community is diverse in political affiliation. Not all people who are lesbian, gay, bisexual, or transgender consider themselves part of the LGBT community.</i></p>
+    </div>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 1500);
+        
+}
+</script>
+        
+ 
+     <div id="footer">
+                Copyright ©️ 2018 Enxi Cui</div>
+</body>
+</html>
